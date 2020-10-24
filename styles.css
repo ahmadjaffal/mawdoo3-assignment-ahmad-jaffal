@@ -1,0 +1,268 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+    min-height: 70vh;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header,
+.continue-btn {
+    text-align: center;
+    margin: 70px 0;
+}
+
+header h1 {
+    font-size: 42px;
+    color: #303446;
+}
+
+header h2 {
+    font-size: 30px;
+    color: #646775;
+}
+
+#main-container {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.main-packages-wrapper {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.gray-color {
+    color: #a1b2c6;
+}
+
+.darkgray-color {
+    color: #6c8199;
+}
+
+.left-checklist {
+    margin-top: 8%;
+    flex-grow: 0.1;
+}
+
+.left-checklist li {
+    font-size: 23px;
+    color: #9799a2;
+    padding: 16px 0
+}
+
+.bordered-section {
+    border: solid 2px #dadada;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    flex-grow: 0.2;
+}
+
+.bordered-section.active {
+    border-color: #0c75ff;
+    background-color: #f9fbff;
+}
+
+.selected-package {
+    padding: 24px 16px 24px 24px;
+}
+
+.selected-package__name span {
+    font-size: 26px;
+    color: #ffb018;
+}
+
+.selected-package__name .fa-crown {
+    font-size: 15px;
+    color: #ffb018;
+    background: #ffe0a4;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+}
+
+.round-icon {
+    text-align: center;
+    border-radius: 50%;
+}
+
+.selected-package__price {
+    font-size: 30px;
+    margin-top: 6px;
+    color: #303446;
+}
+
+.selected-package__checklist {
+    margin-top: 15px;
+}
+
+.selected-package__checklist li {
+    font-size: 21px;
+    padding: 18px 12px;
+}
+
+.selected-package__checklist .fa-check {
+    color: #0c75ff;
+}
+
+.selected-package__checklist .fa-times {
+    color: #8499b2;
+}
+
+.package-item-container {
+    display: flex;
+    position: relative;
+    padding-left: 55px;
+    cursor: pointer;
+}
+
+.package-item-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 35%;
+    left: 25px;
+    height: 25px;
+    width: 25px;
+    border: solid 2px #dadada;
+    border-radius: 50%;
+}
+
+.package-item-container input:checked ~ .checkmark {
+    background-color: #0c75ff;
+    border-color: #0c75ff;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.package-item-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.package-item-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.package-item-container .label {
+    color: #0c75ff;
+    padding-bottom: 15px;
+    font-size: 22px;
+}
+
+.package-item-container .saving-label {
+    color: #ffb018;
+    background-color: #fbf4e8;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 20px;
+    text-align: center;
+    display: inline;
+}
+
+.package-item-container .saving-label.best-price {
+    color: white;
+    background-color: #ffb018;
+}
+
+.package-item-container .best-price .fa-crown {
+    font-size: 12px;
+    color: #ffb018;
+    background: white;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    vertical-align: text-top;
+    margin-right: 2px;
+}
+
+.package-item-container .total,
+.package-item-container .sub-total {
+    padding-bottom: 8px;
+    font-size: 22px;
+}
+
+.package-item-container > div {
+    padding: 30px;
+}
+
+.total-box {
+    text-align: right;
+    border-right: solid 2px #dadada;
+    flex: auto;
+}
+
+.total-box .price {
+    font-size: 26px;
+}
+
+.active .total-box {
+    border-color: #b9cde5;
+}
+
+.sub-total-box {
+    text-align: right;
+    background-color: #fafbfb;
+    border-radius: 8px;
+}
+
+.sub-total-box .price {
+    color: #303446;
+    font-size: 30px;
+}
+
+.active .sub-total-box {
+    background-color: #f5f8fb;
+}
+
+.packages-list {
+    flex-grow: 0.5;
+}
+
+.packages-list__item {
+    margin-bottom: 18px;
+}
+
+.packages-list__item:last-child {
+    margin-bottom: 0;
+}
+
+.continue-btn a {
+    padding: 22px 120px;
+    background-color: #0c75ff;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 22px;
+}
